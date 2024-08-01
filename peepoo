@@ -1,4 +1,3 @@
-local Testing = false
 -- Cmds
 if table.find(getgenv().Alts,game.Players.LocalPlayer.UserId) then
 	getgenv().PointInTable = table.find(getgenv().Alts,game.Players.LocalPlayer.UserId)
@@ -16,7 +15,6 @@ if Testing == false then
 	TextLabel = Instance.new("TextLabel")
 	TextLabel_2 = Instance.new("TextLabel")
 	TextLabel_3 = Instance.new("TextLabel")
-	BottomRightText = Instance.new("TextLabel")
 
 	main.Name = "RenderScreen"
 	main.Parent = game.CoreGui
@@ -42,23 +40,6 @@ if Testing == false then
 	TextLabel.TextScaled = false
 	TextLabel.TextSize = 19.000
 	TextLabel.TextWrapped = false
-
-	BottomRightText.Parent = Frame
-	BottomRightText.AnchorPoint = Vector2.new(1, 1)
-	BottomRightText.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-	BottomRightText.BackgroundTransparency = 1.000
-	BottomRightText.Position = UDim2.new(1, -10, 1, -10) -- Positioned at the bottom right with some padding
-	BottomRightText.Size = UDim2.new(0, 200, 0, 34)
-	BottomRightText.Font = Enum.Font.Gotham
-	BottomRightText.Text = "made by @nrkq"
-	BottomRightText.TextColor3 = Color3.fromRGB(255, 255, 255)
-	BottomRightText.TextScaled = false
-	BottomRightText.TextSize = 19.000
-	BottomRightText.TextWrapped = false
-	BottomRightText.TextXAlignment = Enum.TextXAlignment.Right
-	BottomRightText.TextYAlignment = Enum.TextYAlignment.Bottom
-	BottomRightText.Font = Enum.Font.GothamBold -- Making the text bold
-
 	if not game:IsLoaded() then
 		repeat wait(.1) until game:IsLoaded() 
 	end
